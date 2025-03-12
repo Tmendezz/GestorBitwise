@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GestorBitwise.ENTITY\GestorBitwise.ENTITY.csproj" />
+  </ItemGroup>
+
 </Project>

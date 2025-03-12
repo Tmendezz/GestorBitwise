@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GestorBitwise.BLL\GestorBitwise.BLL.csproj" />
+    <ProjectReference Include="..\GestorBitwise.DAL\GestorBitwise.DAL.csproj" />
+    <ProjectReference Include="..\GestorBitwise.ENTITY\GestorBitwise.ENTITY.csproj" />
+  </ItemGroup>
+
 </Project>

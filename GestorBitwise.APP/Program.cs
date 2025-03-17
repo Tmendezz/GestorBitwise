@@ -1,7 +1,20 @@
+using GestorBitwise.APP.Utilities;
+using GestorBitwise.BLL.Implementations;
+using GestorBitwise.BLL.Interfaces;
+using GestorBitwise.DAL;
+using GestorBitwise.DAL.Implementations;
+using GestorBitwise.DAL.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<DbBitwiseTraining2Context>(opt =>
+                                   opt.UseSqlServer(builder.Configuration.GetConnectionString("cadenaSQL")));
+builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 var app = builder.Build();
 

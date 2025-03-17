@@ -16,17 +16,17 @@ public partial class DbBitwiseTraining2Context : DbContext
     {
     }
 
-    public virtual DbSet<Categoria> Categorias { get; set; }
+    public virtual DbSet<Categoria> Categoria { get; set; }
 
-    public virtual DbSet<Configuracion> Configuraciones { get; set; }
+    public virtual DbSet<Configuracion> Configuracione { get; set; }
 
-    public virtual DbSet<DetalleVenta> DetalleVentas { get; set; }
+    public virtual DbSet<DetalleVenta> DetalleVenta { get; set; }
 
-    public virtual DbSet<NumeroCorrelativo> NumeroCorrelativos { get; set; }
+    public virtual DbSet<NumeroCorrelativo> NumeroCorrelativo { get; set; }
 
-    public virtual DbSet<Producto> Productos { get; set; }
+    public virtual DbSet<Producto> Producto { get; set; }
 
-    public virtual DbSet<Venta> Ventas { get; set; }
+    public virtual DbSet<Venta> Venta { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
 
